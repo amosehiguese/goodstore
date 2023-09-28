@@ -56,7 +56,7 @@ export const CheckoutForm = ({
         type='text'
         name='name'
         label="Cardholder's Name"
-        // ref={register}
+        {...register}
         errors={errors.name}
       />
       <FormField
@@ -75,14 +75,14 @@ export const CheckoutForm = ({
               .substring(0, 19) || ''
           );
         }}
-        // ref={register}
+        {...register}
         errors={errors.cardNumber}
       />
       <FormField
         type='month'
         name='expDate'
         label='Expiration Date'
-        // ref={register}
+        {...register}
         errors={errors.expDate}
       />
       <FormField
@@ -90,7 +90,7 @@ export const CheckoutForm = ({
         type='number'
         name='cvv'
         label='CVV'
-        // ref={register}
+        {...register}
         errors={errors.cvv}
         normalize={(value) => {
           return value.substring(0, 3);
